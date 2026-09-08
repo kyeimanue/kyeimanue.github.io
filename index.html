@@ -85,36 +85,31 @@
   .intro{
     display:flex;
     gap:28px;
-    align-items:flex-start;
+    align-items:stretch;
     margin-bottom:8px;
   }
   .intro-photo{
     flex-shrink:0;
     width:150px;
+    display:flex;
+    flex-direction:column;
     text-align:center;
   }
   .hero-photo{
-    width:150px;
-    height:150px;
+    width:100%;
+    flex:1;
+    min-height:0;
     object-fit:cover;
     border-radius:6px;
     background:#eeeeee;
     display:block;
   }
   .photo-credit{
+    flex-shrink:0;
     font-size:12px;
     font-style:italic;
     color:var(--muted);
     margin:6px 0 0;
-  }
-  .intro-links{
-    margin:14px 0 0;
-    font-size:14px;
-  }
-  .intro-links a{
-    display:block;
-    margin-bottom:6px;
-    overflow-wrap:anywhere;
   }
   .intro-text{
     flex:1;
@@ -170,7 +165,7 @@
       gap:16px;
     }
     .intro-photo{ width:130px; }
-    .hero-photo{ width:130px; height:130px; }
+    .hero-photo{ width:130px; height:130px; flex:none; }
   }
 </style>
 </head>
@@ -195,15 +190,13 @@
       <div class="intro-photo">
         <!-- Replace photo.jpg (same folder as this file) with your own photo. -->
         <img class="hero-photo" src="photo.jpg" alt="Emmanuella Kyei Manu">
-        <p class="photo-credit"><!-- Photo credit, or delete this line --></p>
-        <p class="intro-links">
-          <a href="CV_KyeiManu.pdf">CV</a>
-          <a href="mailto:kyeimanu@stanford.edu">kyeimanu@stanford.edu</a>
-        </p>
+        <p class="photo-credit">Photo by Vanessa Coleman</p>
       </div>
       <div class="intro-text">
-        <p>I am a PhD Candidate in the Department of Economics at Stanford University, advised by Peter J. Klenow and Melanie Morten </p>
-        <p> My research is in macroeconomics and development economics. Before Stanford, I earned a bachelor's degree in economics from Princeton University and a master's degree in economics from the London School of Economics and Political Science.</p>
+        <p>I am a PhD Candidate in the Department of Economics at Stanford University, advised by Peter J. Klenow and Melanie Morten.</p>
+        <p>My research is in macroeconomics and development economics. Before Stanford, I earned a bachelor's degree in economics from Princeton University and a master's degree in economics from the London School of Economics and Political Science.</p>
+        <p><a href="CV_KyeiManu.pdf">Link to my CV</a></p>
+        <p>Email: <a href="mailto:kyeimanu@stanford.edu">kyeimanu@stanford.edu</a></p>
       </div>
     </div>
 
