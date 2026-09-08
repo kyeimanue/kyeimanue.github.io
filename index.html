@@ -90,19 +90,45 @@
   /* ---------- main ---------- */
   main{ padding-top:32px; }
 
+  .intro{
+    display:flex;
+    gap:28px;
+    align-items:flex-start;
+    margin-bottom:8px;
+  }
+  .intro-photo{
+    flex-shrink:0;
+    width:150px;
+    text-align:center;
+  }
   .hero-photo{
-    width:100%;
-    height:auto;
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:6px;
     background:#eeeeee;
     display:block;
-    margin:0 0 8px;
   }
   .photo-credit{
-    font-size:13px;
+    font-size:12px;
     font-style:italic;
     color:var(--muted);
-    margin:0 0 28px;
+    margin:6px 0 0;
   }
+  .intro-links{
+    margin:14px 0 0;
+    font-size:14px;
+  }
+  .intro-links a{
+    display:block;
+    margin-bottom:6px;
+    overflow-wrap:anywhere;
+  }
+  .intro-text{
+    flex:1;
+    min-width:0;
+  }
+  .intro-text p:first-child{ margin-top:0; }
 
   p{ margin:0 0 18px; color:var(--text-soft); }
 
@@ -147,6 +173,12 @@
     .topbar-inner{ padding:12px 20px; }
     .col{ padding:0 20px; }
     .toplinks a{ margin-left:16px; }
+    .intro{
+      flex-direction:column;
+      gap:16px;
+    }
+    .intro-photo{ width:130px; }
+    .hero-photo{ width:130px; height:130px; }
   }
 </style>
 </head>
@@ -168,14 +200,21 @@
 <main id="top">
   <div class="col">
 
-    <!-- Replace photo.jpg (same folder as this file) with your own photo. -->
-    <img class="hero-photo" src="photo.jpg" alt="Emmanuella Kyei Manu">
-    <p class="photo-credit"><!-- Photo credit, or delete this line --></p>
-
-    <p>I am a PhD Candidate in the Department of Economics at Stanford University. I am advised by Peter J. Klenow and Melanie Morten.</p>
-    <p>I study questions in macroeconomics and development economics, using tools from firm and household heterogeneity to understand why economic and well-being outcomes differ so starkly across countries.</p>
-    <p>You can find my CV <a href="CV_KyeiManu.pdf">here</a>.</p>
-    <p>Contact: <a href="mailto:kyeimanu@stanford.edu">kyeimanu@stanford.edu</a></p>
+    <div class="intro">
+      <div class="intro-photo">
+        <!-- Replace photo.jpg (same folder as this file) with your own photo. -->
+        <img class="hero-photo" src="photo.jpg" alt="Emmanuella Kyei Manu">
+        <p class="photo-credit"><!-- Photo credit, or delete this line --></p>
+        <p class="intro-links">
+          <a href="CV_KyeiManu.pdf">CV</a>
+          <a href="mailto:kyeimanu@stanford.edu">kyeimanu@stanford.edu</a>
+        </p>
+      </div>
+      <div class="intro-text">
+        <p>I am a PhD Candidate in the Department of Economics at Stanford University. I am advised by Peter J. Klenow and Melanie Morten.</p>
+        <p>I study questions in macroeconomics and development economics, using tools from firm and household heterogeneity to understand why economic and well-being outcomes differ so starkly across countries.</p>
+      </div>
+    </div>
 
     <h2 id="research">Working Papers</h2>
 
