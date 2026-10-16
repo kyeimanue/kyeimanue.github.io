@@ -149,6 +149,13 @@
     min-width:0;
   }
   .intro-text p:first-child{ margin-top:0; }
+  /* Justified prose, with auto-hyphenation to avoid rivers of whitespace */
+  .intro-text p,
+  .paper-abstract{
+    text-align:justify;
+    hyphens:auto;
+    -webkit-hyphens:auto;
+  }
   .jobmarket{
     font-weight:600;
     color:var(--ink);
@@ -310,6 +317,14 @@
     </div>
 
     
+
+    <h2 id="policy">Selected Policy Work</h2>
+
+    <div class="paper">
+      <p class="paper-title">The State of Youth Unemployment</p>
+      <p class="paper-byline">with <a href="https://www.waveacademies.org/">West Africa Vocational Education Academies</a></p>
+      <p class="paper-abstract">An original survey of young Nigerians in Lagos, examining their experience of unemployment and underemployment.</p>
+    </div>
 
     <h2 id="teaching">Teaching</h2>
 
