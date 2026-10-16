@@ -271,8 +271,15 @@
       flex-direction:column;
       gap:16px;
     }
-    .intro-photo{ width:215px; }
-    .hero-photo{ width:215px; height:215px; flex:none; }
+    .intro-photo{
+      width:100%;        /* photo column fills the text width on mobile */
+      margin:0 auto;     /* centered (belt-and-suspenders; 100% already spans) */
+    }
+    .hero-photo{
+      width:100%;
+      height:auto;       /* natural aspect ratio instead of the desktop stretch */
+      flex:none;
+    }
     .meta-row{ grid-template-columns:1fr; row-gap:1px; margin-bottom:12px; }
     h2{ font-size:22px; margin-top:44px; }
   }
