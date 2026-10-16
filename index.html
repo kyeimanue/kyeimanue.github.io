@@ -161,6 +161,27 @@
     color:var(--ink);
   }
 
+  /* Contact block: muted label column, like the CV's year column */
+  .meta{
+    margin-top:20px;
+    border-top:1px solid var(--line);
+    padding-top:16px;
+  }
+  .meta-row{
+    display:grid;
+    grid-template-columns:92px 1fr;
+    column-gap:14px;
+    margin-bottom:9px;
+    font-size:15px;
+    line-height:1.55;
+  }
+  .meta-row:last-child{ margin-bottom:0; }
+  .meta-label{
+    color:var(--muted);
+    font-weight:500;
+  }
+  .member{ white-space:nowrap; }
+
   p{ margin:0 0 18px; }
 
   /* Section headings echo the CV: serif name over a full-width hairline rule */
@@ -252,6 +273,7 @@
     }
     .intro-photo{ width:215px; }
     .hero-photo{ width:215px; height:215px; flex:none; }
+    .meta-row{ grid-template-columns:1fr; row-gap:1px; margin-bottom:12px; }
     h2{ font-size:22px; margin-top:44px; }
   }
 </style>
@@ -285,9 +307,20 @@
         <p>I am a PhD Candidate in the Department of Economics at Stanford University.</p>
         <p>My research is in macroeconomics and development economics. Before Stanford, I earned a bachelor's degree in economics from Princeton University and a master's degree in economics from the London School of Economics and Political Science.</p>
         <p class="jobmarket">I am on the job market for 2026/2027.</p>
-        <p><a href="CV_KyeiManu.pdf">Link to my CV</a></p>
-        <p>Email: <a href="mailto:kyeimanu@stanford.edu">kyeimanu@stanford.edu</a></p>
-        <p>Committee: <a href="mailto:pete.klenow@gmail.com">Peter J Klenow</a> (co-chair), <a href="mailto:memorten@stanford.edu">Melanie Morten</a> (co-chair), <a href="mailto:pkehoe@stanford.edu">Patrick Kehoe</a>, <a href="mailto:bennyk@stanford.edu">Benny Kleinman</a></p>
+        <div class="meta">
+          <div class="meta-row">
+            <span class="meta-label">CV</span>
+            <span class="meta-value"><a href="CV_KyeiManu.pdf">Download PDF</a></span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Email</span>
+            <span class="meta-value"><a href="mailto:kyeimanu@stanford.edu">kyeimanu@stanford.edu</a></span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Committee</span>
+            <span class="meta-value"><span class="member"><a href="mailto:pete.klenow@gmail.com">Peter J Klenow</a> (co-chair),</span> <span class="member"><a href="mailto:memorten@stanford.edu">Melanie Morten</a> (co-chair),</span> <span class="member"><a href="mailto:pkehoe@stanford.edu">Patrick Kehoe</a>,</span> <span class="member"><a href="mailto:bennyk@stanford.edu">Benny Kleinman</a></span></span>
+          </div>
+        </div>
       </div>
     </div>
 
